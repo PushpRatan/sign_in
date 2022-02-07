@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignIn || SignUp</title>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="extra">
+		<div class="bubble">
+			<button class="btn_bubble bubble_in" style="grid-area: a">Sign In</button>
+			<button class="btn_bubble bubble_up" style="grid-area: c">Sign Up</button>
+		</div>
+		<div class="forms" id="Sign_In">
+			<div id="si_in">
+				<h1>Sign In</h1>
+				<form>
+					<div class="user">
+						<input type="text" id="in_email" name="email" placeholder="email" autocomplete="off" required>
+					</div>
+
+					<div class="user" id="pass">
+						<input type="password" id="in_password" name="password" placeholder="Password" autocomplete="off" required>
+					</div>
+
+					<button class="btn_submit" type="submit">Sign In</button>
+
+				</form>
+			</div>
+		</div>
+
+		<div class="forms" id="Sign_Up">
+			<div id="si_up">
+				<h1>Sign Up</h1>
+				<form>
+					<div class="user">
+						<input type="text" id="up_username" name="username" placeholder="Username" autocomplete="off" required>
+					</div>
+
+					<div class="user" id="mail">
+						<input type="email" id="up_email" name="email" placeholder="email">
+					</div>
+
+					<div class="user" id="pass">
+						<input type="password" id="up_password" name="password" placeholder="Create Password" autocomplete="off" required>
+					</div>
+
+					<button class="btn_submit" type="submit">Sign In</button>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function form_in(){
+		   document.getElementById("Sign_In").classList.add("show_form_in");
+		   document.getElementById("Sign_Up").classList.remove("show_form_up");
+		}
+
+		function form_up(){
+		   document.getElementById("Sign_Up").classList.add("show_form_up");
+		   document.getElementById("Sign_In").classList.remove("show_form_in");
+		}
+
+		document.querySelector(".bubble_in").addEventListener('click', form_in);
+		document.querySelector(".bubble_up").addEventListener('click', form_up);
+	</script>
+</body>
+</html>
